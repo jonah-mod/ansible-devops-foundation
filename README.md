@@ -1,20 +1,20 @@
 <!-- # ansible-devops-foundation -->
 
-🚀 Ansible DevOps Server Setup
+# 🚀 Ansible DevOps Server Setup
 <div align="center">
 
-https://img.shields.io/badge/Ansible-2.9+-green.svg
-https://img.shields.io/badge/Platform-Linux-blue.svg
-https://img.shields.io/badge/License-MIT-yellow.svg
+![ansible](https://img.shields.io/badge/Ansible-2.9+-green.svg)
+![Linux](https://img.shields.io/badge/Platform-Linux-blue.svg)
+![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 Ansible project for rapid and automated DevOps server provisioning.
 </div>
 
-🎯 Project Overview
+<b>🎯 Project Overview</b>
 
 This project is a collection of Ansible Playbooks for automated and standardized Linux server setup in DevOps environments. Using this project, you can prepare your servers for service in minimal time.
 
-🚀 Quick Start
+<b>🚀 Quick Start</b> </br>
 
 1. Clone the Repository
 ```bash
@@ -40,7 +40,7 @@ ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/*
 ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/docker.yml
 ```
 
-📁 Project Structure
+<b>📁 Project Structure</b>
 ```text
 ansible-devops-foundation/
 ├── inventory/
@@ -57,12 +57,12 @@ ansible-devops-foundation/
 ├── files/                       # Static files
 └── README.md
 ```
-🎮 Usage
-Full Setup:
+<b>🎮 Usage</b></br>
+- Full Setup:
 ```bash
 ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/*
 ```
-Step-by-Step Execution:
+- Step-by-Step Execution:
 ```bash
 # 1. Security Hardening
 ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/hardening.yml
