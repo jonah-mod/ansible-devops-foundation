@@ -1,0 +1,8 @@
+---
+- hosts: my-servers
+  become: true
+  gather_facts: yes
+  name: install and configure docker service
+  roles:
+    # install and configure docker service
+    - { role: roles/docker, become: True, tags: docker_setup}
