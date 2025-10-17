@@ -17,6 +17,11 @@ Ansible project for rapid and automated DevOps server provisioning.
 
 This project is a collection of Ansible Playbooks for automated and standardized Linux server setup in DevOps environments. Using this project, you can prepare your servers for service in minimal time.
 
+- Prepating-Server: Doing update and upgrade from apt Package Manager
+- Docker: Installing Docker and its utilities from apt Package Manager - Add user to Docker user group - Start and enable Docker service
+- Adding Soon ...
+
+
 <b>🚀 Quick Start</b> </br>
 
 1. Clone the Repository
