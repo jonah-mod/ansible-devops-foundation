@@ -64,12 +64,16 @@ ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/*
 ```
 - Step-by-Step Execution:
 ```bash
-# 1. Security Hardening
-ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/hardening.yml
 
-# 2. Docker Installation
-ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/docker.yml
+# 1. Docker Installation
+ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/docker.yaml
 
-# 3. Monitoring Setup
-ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/monitoring.yml
+# 2. Security Hardening
+ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/preparing.yaml
+
+# 3. Security Hardening (in-progress)
+ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/hardening.yaml
+
+# 4. Monitoring Setup (in-progress)
+ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/monitoring.yaml
 ```
