@@ -2,7 +2,7 @@
 - hosts: all
   become: true
   gather_facts: yes
-  name: Hardening and Tuning OS + Install and Config Docker Service
+  name: Tuning OS + Install and Config Docker Service
   roles:
     # preparing server and hardening
     - { role: roles/preparing-server, become: True, tags: preparing_server}

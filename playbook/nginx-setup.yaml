@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  gather_facts: yes
+  name: Nginx Setup
+  roles:
+    # nginx setup role
+    # IN-PROGRESS

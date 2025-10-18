@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  gather_facts: yes
+  name: Nginx Hardening
+  roles:
+    # nginx hardening role
+    # IN-PROGRESS

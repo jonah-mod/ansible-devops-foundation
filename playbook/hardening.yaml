@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  gather_facts: yes
+  name: Hardening OS + Hardening SSH
+  roles:
+    # hardening os and ssh roles
+    # IN-PROGRESS

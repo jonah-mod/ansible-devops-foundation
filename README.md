@@ -85,3 +85,8 @@ ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/harde
 # 4. Monitoring Setup (in-progress)
 ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/monitoring.yaml
 ```
+
+<b>👥 Credit</b></br>
+
+- [geerlingguy](https://github.com/geerlingguy): [nginx](https://github.com/geerlingguy/ansible-role-nginx), [php](https://github.com/geerlingguy/ansible-role-php)
+- [Dev-Sec](https://github.com/dev-sec): [OS-Hardening](https://github.com/dev-sec/ansible-collection-hardening), [SSH-Hardening](https://github.com/dev-sec/ansible-ssh-hardening), [Nginx-Hardening](https://github.com/dev-sec/ansible-nginx-hardening)
