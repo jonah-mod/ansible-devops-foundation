@@ -3,9 +3,12 @@
 # 🚀 Ansible DevOps Server Setup
 <div align="center">
 
-![ansible](https://img.shields.io/badge/Ansible-2.9+-green.svg)
-![Linux](https://img.shields.io/badge/Platform-Linux-blue.svg)
-![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+<!-- ![ansible](https://img.shields.io/badge/Ansible-2.9+-green.svg) -->
+<!-- ![Linux](https://img.shields.io/badge/Platform-Linux-blue.svg) -->
+[![ansible](https://img.shields.io/badge/ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)](https://www.ansible.com/)
+[![Debian](https://img.shields.io/badge/debian-red?style=for-the-badge&logo=debian&logoColor=orange&color=darkred)](https://www.debian.org/)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
+[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 Ansible project for rapid and automated DevOps server provisioning.
 </div>
@@ -13,6 +16,11 @@ Ansible project for rapid and automated DevOps server provisioning.
 <b>🎯 Project Overview</b>
 
 This project is a collection of Ansible Playbooks for automated and standardized Linux server setup in DevOps environments. Using this project, you can prepare your servers for service in minimal time.
+
+- Prepating-Server: Doing update and upgrade from apt Package Manager
+- Docker: Installing Docker and its utilities from apt Package Manager - Add user to Docker user group - Start and enable Docker service
+- Adding Soon ...
+
 
 <b>🚀 Quick Start</b> </br>
 
