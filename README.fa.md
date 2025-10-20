@@ -1,11 +1,9 @@
 <!-- # ansible-devops-foundation -->
-[![MIT](https://img.shields.io/badge/Language-Fa-brown.svg?style=flat-square)](https://github.com/jonah-mod/ansible-devops-foundation/blob/main/README.fa.md)
+[![MIT](https://img.shields.io/badge/Language-En-skyblue.svg?style=flat-square)](https://github.com/jonah-mod/ansible-devops-foundation/blob/main/README.md)
 [![MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/jonah-mod/ansible-devops-foundation/blob/main/LICENSE)
-# 🚀 Ansible DevOps Server Setup
+# 🚀 راه‌اندازی سرور DevOps با Ansible
 <div align="center">
 
-<!-- ![ansible](https://img.shields.io/badge/Ansible-2.9+-green.svg) -->
-<!-- ![Linux](https://img.shields.io/badge/Platform-Linux-blue.svg) -->
 [![ansible](https://img.shields.io/badge/ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)](https://www.ansible.com/)
 [![Debian](https://img.shields.io/badge/debian-A81D33?style=for-the-badge&logo=debian&logoColor=white)](https://www.debian.org/)
 [![Arch-Linux](https://img.shields.io/badge/Arch%20Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=fff)](https://archlinux.org)
@@ -15,27 +13,29 @@
 [![Suse](https://img.shields.io/badge/Suse-0C322C?style=for-the-badge&logo=suse&logoColor=white)](https://www.suse.com/)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
 
-Ansible project for rapid and automated DevOps server provisioning.
+
+پروژه Ansible برای راه‌اندازی سریع و خودکار سرور DevOps.
 </div>
 
-<b>🎯 Project Overview</b>
+<b>🎯 معرفی پروژه</b>
 
-This project is a collection of Ansible Playbooks for automated and standardized Linux server setup in DevOps environments. Using this project, you can prepare your servers for service in minimal time.
+این پروژه مجموعه‌ای از Playbookهای Ansible برای راه‌اندازی استاندارد و خودکار سرورهای لینوکس در محیط‌های DevOps می‌باشد. با استفاده از این پروژه می‌توانید سرورهای خود را در کمترین زمان برای سرویس‌دهی آماده کنید.
 
-- Prepating-Server: Doing update and upgrade from apt Package Manager
-- Docker: Installing Docker and its utilities from apt Package Manager - Add user to Docker user group - Start and enable Docker service
-- Adding Soon ...
+#### Preparing-Server:
+انجام بروزرسانی و ارتقا از طریق Apt Package Manager
+#### Docker:
+ نصب Docker و ابزارهای مرتبط از طریق Apt Package Manager - اضافه کردن کاربر به گروه Docker - راه‌اندازی و فعال‌سازی سرویس Docker
+#### به زودی اضافه می‌شود ...
 
+<b>🚀 شروع سریع</b> </br>
 
-<b>🚀 Quick Start</b> </br>
-
-1. Clone the Repository
+#### 1. کلون کردن مخزن
 ```bash
 git clone https://github.com/jonah-mod/ansible-devops-foundation.git
 cd ansible-devops-foundation
 ```
 
-2. Configure Servers
+#### 2. پیکربندی سرورها
 ```bash
 # Copy configuration file
 cp vars/server_vars.example.yaml vars/server_vars.yaml
@@ -44,7 +44,7 @@ cp vars/server_vars.example.yaml vars/server_vars.yaml
 nano vars/server_vars.yaml
 ```
 
-3. Run Playbooks
+#### 3. اجرای Playbook
 ```bash
 # Run all playbooks
 ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/*
@@ -53,7 +53,7 @@ ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/*
 ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/docker.yml
 ```
 
-<b>📁 Project Structure</b>
+<b>📁 ساختار پروژه</b>
 ```text
 ansible-devops-foundation/
 ├── inventory/
@@ -70,12 +70,12 @@ ansible-devops-foundation/
 ├── files/                       # Static files
 └── README.md
 ```
-<b>🎮 Usage</b></br>
-- Full Setup:
+<b>🎮 نحوه استفاده</b></br>
+#### - راه‌اندازی کامل:
 ```bash
 ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/*
 ```
-- Step-by-Step Execution:
+#### - اجرای مرحله به مرحله:
 ```bash
 
 # 1. Docker Installation
@@ -91,7 +91,7 @@ ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/harde
 ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/monitoring.yaml
 ```
 
-<b>👥 Sources</b></br>
+<b>👥 منابع</b></br>
 
 - [geerlingguy](https://github.com/geerlingguy): [Nginx](https://github.com/geerlingguy/ansible-role-nginx), [Php](https://github.com/geerlingguy/ansible-role-php)
 - [Dev-Sec](https://github.com/dev-sec): [OS-Hardening](https://github.com/dev-sec/ansible-collection-hardening), [SSH-Hardening](https://github.com/dev-sec/ansible-ssh-hardening), [Nginx-Hardening](https://github.com/dev-sec/ansible-nginx-hardening)
