@@ -1,23 +1,33 @@
 #SPDX-License-Identifier: MIT-0
+# ---
+# - name: Update apt package cache
+#   apt:
+#     update_cache: yes
+#     cache_valid_time: 3600
+
+# - name: Upgrade all packages
+#   apt:
+#     upgrade: dist
+#     autoremove: yes
+
+# - name: Install basic packages
+#   apt:
+#     name:
+#       - curl
+#       - wget
+#       - vim
+#       - htop
+#       - git
+#       - bash-completion
+#     state: present
+# roles/preparing-server/tasks/main.yml
 ---
-- name: Update apt package cache
-  apt:
-    update_cache: yes
-    cache_valid_time: 3600
+- name: Detect OS and include specific tasks
+  include_tasks: "{{ ansible_distribution | lower | replace(' ', '') }}.yml"
+  ignore_errors: yes
 
-- name: Upgrade all packages
-  apt:
-    upgrade: dist
-    autoremove: yes
-
-- name: Install basic packages
-  apt:
-    name:
-      - curl
-      - wget
-      - vim
-      - htop
-      - git
-      - bash-completion
-    state: present
+- name: Fail if no supported OS detected
+  fail:
+    msg: "سیستم عامل {{ ansible_distribution }} پشتیبانی نمی‌شود"
+  when: os_tasks_failed is defined
 # tasks file for roles/preparing-server

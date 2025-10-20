@@ -1,0 +1,26 @@
+# roles/preparing-server/tasks/debian.yml
+---
+- name: Update apt cache (Debian)
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Upgrade all packages (Debian)
+  apt:
+    upgrade: dist
+    autoremove: yes
+
+- name: Install basic packages (Debian)
+  apt:
+    name:
+      - curl
+      - wget
+      - vim
+      - htop
+      - git
+      - bash-completion
+      - tree
+      - net-tools
+      - sudo
+      - aptitude
+    state: present

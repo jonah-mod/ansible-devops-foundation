@@ -1,0 +1,23 @@
+# roles/preparing-server/tasks/openbsd.yml
+---
+- name: Update package database (OpenBSD)
+  pkgng:
+    update_cache: yes
+
+- name: Upgrade all packages (OpenBSD)
+  pkgng:
+    name: "*"
+    state: latest
+
+- name: Install basic packages (OpenBSD)
+  pkgng:
+    name:
+      - curl--
+      - wget
+      - vim--no_x11
+      - htop
+      - git
+      - bash--
+      - tree
+      - sudo--
+    state: present

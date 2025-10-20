@@ -1,0 +1,28 @@
+# roles/preparing-server/tasks/redhat.yml
+---
+- name: Upgrade all packages (RedHat)
+  yum:
+    name: "*"
+    state: latest
+  when: ansible_pkg_mgr == "yum"
+
+- name: Upgrade all packages (RedHat 8+)
+  dnf:
+    name: "*"
+    state: latest
+  when: ansible_pkg_mgr == "dnf"
+
+- name: Install basic packages (RedHat)
+  package:
+    name:
+      - curl
+      - wget
+      - vim-enhanced
+      - htop
+      - git
+      - bash-completion
+      - tree
+      - net-tools
+      - sudo
+      - yum-utils
+    state: present

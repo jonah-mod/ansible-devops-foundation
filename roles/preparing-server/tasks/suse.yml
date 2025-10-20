@@ -1,0 +1,24 @@
+# roles/preparing-server/tasks/suse.yml
+---
+- name: Update package cache (SUSE)
+  zypper:
+    update_cache: yes
+
+- name: Upgrade all packages (SUSE)
+  zypper:
+    name: "*"
+    state: latest
+
+- name: Install basic packages (SUSE)
+  zypper:
+    name:
+      - curl
+      - wget
+      - vim
+      - htop
+      - git
+      - bash-completion
+      - tree
+      - net-tools
+      - sudo
+    state: present

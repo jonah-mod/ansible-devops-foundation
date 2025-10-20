@@ -1,0 +1,24 @@
+# roles/preparing-server/tasks/archlinux.yml
+---
+- name: Update package database (Arch)
+  pacman:
+    update_cache: yes
+
+- name: Upgrade all packages (Arch)
+  pacman:
+    upgrade: yes
+
+- name: Install basic packages (Arch)
+  pacman:
+    name:
+      - curl
+      - wget
+      - vim
+      - htop
+      - git
+      - bash-completion
+      - tree
+      - net-tools
+      - sudo
+      - base-devel
+    state: present
