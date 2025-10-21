@@ -1,0 +1,29 @@
+---
+- name: Add Docker repository
+  zypper_repository:
+    name: docker
+    repo: https://download.docker.com/linux/sles/{{ ansible_distribution_major_version }}/$basearch/stable
+    state: present
+    gpgcheck: yes
+    gpgkey: https://download.docker.com/linux/sles/gpg
+
+- name: Install Docker
+  zypper:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-compose-plugin
+    state: present
+
+- name: Add user to docker group
+  user:
+    name: "{{ ansible_user }}"
+    groups: docker
+    append: yes
+
+- name: Start and enable Docker service
+  systemd:
+    name: docker
+    state: started
+    enabled: yes

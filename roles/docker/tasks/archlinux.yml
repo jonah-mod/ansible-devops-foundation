@@ -1,0 +1,20 @@
+---
+- name: Install Docker
+  pacman:
+    name:
+      - docker
+      - docker-compose
+    state: present
+    update_cache: yes
+
+- name: Add user to docker group
+  user:
+    name: "{{ ansible_user }}"
+    groups: docker
+    append: yes
+
+- name: Start and enable Docker service
+  systemd:
+    name: docker
+    state: started
+    enabled: yes

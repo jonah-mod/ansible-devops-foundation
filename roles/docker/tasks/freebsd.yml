@@ -1,0 +1,23 @@
+---
+- name: Install Docker
+  pkgng:
+    name: docker
+    state: present
+
+- name: Enable Docker service
+  service:
+    name: docker
+    enabled: yes
+    state: started
+
+- name: Add user to docker group
+  user:
+    name: "{{ ansible_user }}"
+    groups: docker
+    append: yes
+
+- name: Wait for Docker to be ready
+  wait_for:
+    path: /var/run/docker.sock
+    state: present
+    timeout: 30

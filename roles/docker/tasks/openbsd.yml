@@ -1,0 +1,16 @@
+---
+- block:
+  - name: Check Docker support on OpenBSD
+    fail:
+      msg: "Docker is not supported on OpenBSD. For alternative solution you can use podman"
+
+  - name: Install Podman as alternative
+    pkgng:
+      name: podman
+      state: present
+    # when: false
+
+  rescue:
+    - name: Notify about Docker limitation on OpenBSD
+      debug:
+        msg: "Skipping Docker installation on OpenBSD - not supported. Consider using Podman instead."

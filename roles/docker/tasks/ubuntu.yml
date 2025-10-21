@@ -1,0 +1,21 @@
+---
+- name: Install Docker from Ubuntu repositories
+  apt:
+    name:
+      - docker.io
+      - docker-compose
+      - containerd.io
+    state: present
+    update_cache: yes
+
+- name: Add user to docker group
+  user:
+    name: "{{ ansible_user }}"
+    groups: docker
+    append: yes
+
+- name: Start and enable Docker service
+  systemd:
+    name: docker
+    state: started
+    enabled: yes

@@ -1,23 +1,39 @@
 #SPDX-License-Identifier: MIT-0
+# ---
+# - name: Install Docker from Ubuntu repositories
+#   apt:
+#     name:
+#       - docker.io
+#       - docker-compose
+#       - containerd
+#     state: present
+#     update_cache: yes
+
+# - name: Add user to docker group
+#   user:
+#     name: "{{ ansible_user }}"
+#     groups: docker
+#     append: yes
+
+# - name: Start and enable Docker service
+#   systemd:
+#     name: docker
+#     state: started
+#     enabled: yes
 ---
-- name: Install Docker from Ubuntu repositories
-  apt:
-    name:
-      - docker.io
-      - docker-compose
-      - containerd
-    state: present
-    update_cache: yes
+- name: Check if Docker is already installed
+  command: docker --version
+  register: docker_check
+  ignore_errors: yes
+  changed_when: false
 
-- name: Add user to docker group
-  user:
-    name: "{{ ansible_user }}"
-    groups: docker
-    append: yes
+- name: Include OS-specific Docker installation
+  include_tasks: "{{ ansible_distribution | lower | replace(' ', '') }}.yml"
+  when: docker_check is failed
+  ignore_errors: yes
 
-- name: Start and enable Docker service
-  systemd:
-    name: docker
-    state: started
-    enabled: yes
+- name: Fail if no supported OS detected
+  fail:
+    msg: " Docker is not supported on {{ ansible_distribution }} "
+  when: docker_check is failed and os_tasks_failed is defined
 # tasks file for roles/docker

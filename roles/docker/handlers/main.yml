@@ -1,3 +1,9 @@
 #SPDX-License-Identifier: MIT-0
 ---
+- name: restart docker
+  systemd:
+    name: docker
+    state: restarted
+    enabled: yes
+  when: ansible_system != "FreeBSD" and ansible_system != "OpenBSD"
 # handlers file for roles/docker
