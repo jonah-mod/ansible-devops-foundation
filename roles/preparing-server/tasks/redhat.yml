@@ -1,4 +1,3 @@
-# roles/preparing-server/tasks/redhat.yml
 ---
 - name: Upgrade all packages (RedHat)
   yum:

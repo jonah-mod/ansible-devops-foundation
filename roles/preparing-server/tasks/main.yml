@@ -28,6 +28,6 @@
 
 - name: Fail if no supported OS detected
   fail:
-    msg: "سیستم عامل {{ ansible_distribution }} پشتیبانی نمی‌شود"
+    msg: " {{ ansible_distribution }} is not supported"
   when: os_tasks_failed is defined
 # tasks file for roles/preparing-server

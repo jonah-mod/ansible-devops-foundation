@@ -1,4 +1,3 @@
-# roles/preparing-server/tasks/debian.yml
 ---
 - name: Update apt cache (Debian)
   apt:
