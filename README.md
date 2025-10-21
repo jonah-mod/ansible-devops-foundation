@@ -18,7 +18,15 @@
 Ansible project for rapid and automated DevOps server provisioning.
 </div>
 
-<b>🎯 Project Overview</b>
+## <b>Table Of Content</b>
+- Project Overview
+- Quick Start
+- Usage
+- Project Structure
+- Notes
+- Sources
+
+### <b>🎯 Project Overview</b>
 
 This project is a collection of Ansible Playbooks for automated and standardized Linux server setup in DevOps environments. Using this project, you can prepare your servers for service in minimal time.
 
@@ -27,7 +35,7 @@ This project is a collection of Ansible Playbooks for automated and standardized
 - Adding Soon ...
 
 
-<b>🚀 Quick Start</b> </br>
+### <b>🚀 Quick Start</b>
 
 1. Clone the Repository
 ```bash
@@ -53,24 +61,7 @@ ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/*
 ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/docker.yml
 ```
 
-<b>📁 Project Structure</b>
-```text
-ansible-devops-foundation/
-├── inventory/
-│   └── host.yaml                 # Inventory file
-├── playbook/
-│   ├── hardening.yml            # Security hardening
-│   ├── docker.yml               # Docker installation
-│   └── monitoring.yml           # Monitoring setup
-├── vars/
-│   ├── server_vars.yaml         # Main variables
-│   └── server_vars.example.yaml # Example variables
-├── roles/                       # Ansible roles
-├── templates/                   # Template files
-├── files/                       # Static files
-└── README.md
-```
-<b>🎮 Usage</b></br>
+### <b>🎮 Usage</b>
 - Full Setup:
 ```bash
 ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/*
@@ -91,7 +82,59 @@ ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/harde
 ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/monitoring.yaml
 ```
 
-<b>👥 Sources</b></br>
+### <b>📁 Project Structure</b>
+```text
+ansible-devops-foundation/
+├── inventory/
+│   └── host.yaml                # Inventory file
+├── playbook/
+│   ├── preparing.yaml           # Preparing setup
+│   ├── hardening.yaml           # Security hardening
+│   ├── docker.yaml              # Docker installation
+│   ├── nginx.yaml               # Nginx setup + Nginx Hardening 
+│   ├── nginx-hardening.yaml     # Nginx Hardening
+│   ├── nginx-setup.yaml         # Nginx setup
+│   ├── php-setup.yaml           # Php setup
+│   └── setup-node.yaml          # Preparing + Docker
+├── vars/
+│   └── server_vars.yaml         # Main variables
+├── roles/                       # Ansible roles
+│   ├── docker/                  # Docker role
+│   │   └── ...
+│   ├── preparing-server/        # Preparing role
+│   │   └── ...
+│   ├── nginx/                   # Nginx role
+│   │   └── ...
+│   ├── php/                     # Php role
+│   │   └── ...
+│   ├── os-hardening/            # OS-Hardening role
+│   │   └── ...
+│   ├── ssh-hardening/           # SSH-Hardening role
+│   │   └── ...
+│   └── nginx-hardening/         # Nginx-Hardening role
+│       └── ...
+├── .gitignore
+├── ansible.cfg                  # Ansible config
+├── LICENSE                      # License file
+├── README.fa.md
+└── README.md
+```
+### <b>📝 Notes</b>
+
+- Preparing-Server
+    - FreeBSD and OpenBSD needs python on target OS.
+    - Arch Linux may need some extra tweaks.
+    - For SUSE needs to activate some of repositories.
+    - Packages are optimized for each distros.
+
+- Docker
+    - OpenBSD DOESN'T support docker natively.
+    - FreeBSD does support docker but there are some limitations.
+    - RedHat/CentOS 8+ uses `dnf` package manager instead of `yum`.
+    - It's better to use official repository for production areas.
+    - ‌Be sure that the `$user` is existed on OS.
+
+### <b>👥 Sources</b>
 
 - [geerlingguy](https://github.com/geerlingguy): [Nginx](https://github.com/geerlingguy/ansible-role-nginx), [Php](https://github.com/geerlingguy/ansible-role-php)
 - [Dev-Sec](https://github.com/dev-sec): [OS-Hardening](https://github.com/dev-sec/ansible-collection-hardening), [SSH-Hardening](https://github.com/dev-sec/ansible-ssh-hardening), [Nginx-Hardening](https://github.com/dev-sec/ansible-nginx-hardening)
