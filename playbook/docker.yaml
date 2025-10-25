@@ -5,4 +5,4 @@
   name: install and configure docker service
   roles:
     # install and configure docker service
-    - { role: roles/docker, become: True, tags: docker_setup}
+    - { role: roles/docker, become: True, tags: docker-setup}

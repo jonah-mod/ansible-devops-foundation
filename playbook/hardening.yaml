@@ -3,6 +3,7 @@
   become: true
   gather_facts: yes
   name: Hardening OS + Hardening SSH
+
   roles:
-    # hardening os and ssh roles
-    # IN-PROGRESS
+    - { role: roles/os-hardening, become: true, tags: harden-os}
+    - { role: roles/ssh-hardening, become: true, tags: harden-ssh}

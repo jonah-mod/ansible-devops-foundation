@@ -1,8 +1,22 @@
 ---
-- hosts: all
+- hosts: webservers
   become: true
   gather_facts: yes
   name: Nginx Hardening
+  # vars:
+  #   nginx_hardening_ssl_ciphers: "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256"
+  #   nginx_hardening_ssl_protocols: "TLSv1.2 TLSv1.3"
+    
+  #   # Security headers
+  #   nginx_hardening_header: true
+  #   nginx_hardening_hsts: true
+  #   nginx_hardening_hsts_max_age: 63072000
+    
+  #   # Server tokens
+  #   nginx_hardening_server_tokens: off
+    
+  #   # File access restrictions
+  #   nginx_hardening_restrict_access: true
+    
   roles:
-    # nginx hardening role
-    # IN-PROGRESS
+    - { role: roles/nginx-hardening, become: true, tags: harden-nginx}

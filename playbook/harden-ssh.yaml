@@ -1,0 +1,20 @@
+---
+- name: Apply SSH hardening
+  hosts: all
+  become: yes
+  # vars:
+  #   # SSH daemon configuration
+  #   sshd_config:
+  #     Port: 2222  # Change default SSH port
+  #     PermitRootLogin: "no"
+  #     PasswordAuthentication: "no"
+  #     ClientAliveInterval: 300
+  #     ClientAliveCountMax: 2
+    
+  #   # SSH client configuration
+  #   ssh_client_config:
+  #     Host: "*"
+  #     StrictHostKeyChecking: "accept-new"
+  #
+  roles:
+    - { role: roles/ssh-hardening, become: true, tags: harden-ssh}

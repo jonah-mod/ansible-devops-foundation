@@ -4,5 +4,5 @@
   gather_facts: yes
   name: Nginx Setup + Nginx Hardening
   roles:
-    # Nginx roles
-    # IN-PROGRESS
+    - { role: roles/nginx, become: true, tags: nginx-setup}
+    - { role: roles/nginx-hardening, become: true, tags: harden-nginx}

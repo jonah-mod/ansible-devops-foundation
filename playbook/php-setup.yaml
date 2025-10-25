@@ -1,8 +1,32 @@
 ---
-- hosts: all
-  become: true
-  gather_facts: yes
-  name: Php Setup
+- name: Install and configure PHP
+  hosts: webservers
+  become: yes
+  # vars:
+  #   php_version: "8.1"
+  #   php_memory_limit: "256M"
+  #   php_max_execution_time: "120"
+  #   php_upload_max_filesize: "64M"
+  #   php_post_max_size: "64M"
+    
+  #   # Install common PHP extensions
+  #   php_extensions:
+  #     - curl
+  #     - gd
+  #     - json
+  #     - mbstring
+  #     - xml
+  #     - zip
+  #     - mysqlnd
+  #     - opcache
+    
+  #   # PHP-FPM configuration
+  #   php_fpm_pools:
+  #     - name: www
+  #       listen: "/var/run/php-fpm.sock"
+  #       listen_owner: nginx
+  #       listen_group: nginx
+  #       listen_mode: "0660"
+        
   roles:
-    # php setup role
-    # IN-PROGRESS
+    - { role: roles/php, become: true, tags: php-setup}

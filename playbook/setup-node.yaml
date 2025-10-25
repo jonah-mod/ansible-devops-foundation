@@ -5,6 +5,6 @@
   name: Tuning OS + Install and Config Docker Service
   roles:
     # preparing server and hardening
-    - { role: roles/preparing-server, become: True, tags: preparing_server}
+    - { role: roles/preparing-server, become: True, tags: preparing-server}
     # install and configure docker service
-    - { role: roles/docker, become: True, tags: docker_setup}
+    - { role: roles/docker, become: True, tags: docker-setup}
