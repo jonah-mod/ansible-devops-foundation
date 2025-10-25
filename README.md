@@ -76,7 +76,7 @@ ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/docke
 # 2. Security Hardening
 ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/preparing.yaml
 
-# 3. Security Hardening (in-progress)
+# 3. Security Hardening
 ansible-playbook -i inventory/host.yaml -e @vars/server_vars.yaml playbook/hardening.yaml
 
 # 4. Monitoring Setup (in-progress)
@@ -91,6 +91,8 @@ ansible-devops-foundation/
 ├── playbook/
 │   ├── preparing.yaml           # Preparing setup
 │   ├── hardening.yaml           # Security hardening
+│   ├── harden-ssh.yaml          # SSH hardening
+│   ├── harden-os.yaml           # OS hardening
 │   ├── docker.yaml              # Docker installation
 │   ├── nginx.yaml               # Nginx setup + Nginx Hardening 
 │   ├── nginx-hardening.yaml     # Nginx Hardening
@@ -127,7 +129,6 @@ ansible-devops-foundation/
     - Arch Linux may need some extra tweaks.
     - For SUSE needs to activate some of repositories.
     - Packages are optimized for each distros.
-
 - Docker
     - OpenBSD DOESN'T support docker natively.
     - FreeBSD does support docker but there are some limitations.
