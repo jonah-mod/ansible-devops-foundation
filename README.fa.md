@@ -1,6 +1,6 @@
 <!-- # ansible-devops-foundation -->
-[![MIT](https://img.shields.io/badge/Language-En-skyblue.svg?style=flat-square)](https://github.com/jonah-mod/ansible-devops-foundation/blob/main/README.md)
-[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/jonah-mod/ansible-devops-foundation/blob/main/LICENSE)
+[![MIT](https://img.shields.io/badge/Language-En-skyblue.svg?style=flat-square)](https://github.com/younesmod/ansible-devops-foundation/blob/main/README.md)
+[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/younesmod/ansible-devops-foundation/blob/main/LICENSE)
 # 🚀 راه‌اندازی سرور DevOps با Ansible
 <div align="center">
 
@@ -39,7 +39,7 @@
 
 #### 1. کلون کردن مخزن
 ```bash
-git clone https://github.com/jonah-mod/ansible-devops-foundation.git
+git clone https://github.com/younesmod/ansible-devops-foundation.git
 cd ansible-devops-foundation
 ```
 
