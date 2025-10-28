@@ -1,6 +1,6 @@
 <!-- # ansible-devops-foundation -->
-[![MIT](https://img.shields.io/badge/Language-Fa-brown.svg?style=flat-square)](https://github.com/jonah-mod/ansible-devops-foundation/blob/main/README.fa.md)
-[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/jonah-mod/ansible-devops-foundation/blob/main/LICENSE)
+[![MIT](https://img.shields.io/badge/Language-Fa-brown.svg?style=flat-square)](https://github.com/younesmod/ansible-devops-foundation/blob/main/README.fa.md)
+[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/younesmod/ansible-devops-foundation/blob/main/LICENSE)
 # 🚀 Ansible DevOps Server Setup
 <div align="center">
 
@@ -40,7 +40,7 @@ This project is a collection of Ansible Playbooks for automated and standardized
 
 1. Clone the Repository
 ```bash
-git clone https://github.com/jonah-mod/ansible-devops-foundation.git
+git clone https://github.com/younesmod/ansible-devops-foundation.git
 cd ansible-devops-foundation
 ```
 
