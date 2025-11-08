@@ -1,12 +1,13 @@
 <!-- # ansible-devops-foundation -->
-[![MIT](https://img.shields.io/badge/Language-Fa-brown.svg?style=flat-square)](https://github.com/younesmod/ansible-devops-foundation/blob/main/README.fa.md)
+[![Farsi](https://img.shields.io/badge/Language-Fa-brown.svg?style=flat-square)](https://github.com/younesmod/ansible-devops-foundation/blob/main/README.fa.md)
 [![MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/younesmod/ansible-devops-foundation/blob/main/LICENSE)
+[![Ansible](https://img.shields.io/badge/Powered%20By-Ansible-EE0000?style=flat-square)](https://www.ansible.com/)
 # 🚀 Ansible DevOps Server Setup
 <div align="center">
 
 <!-- ![ansible](https://img.shields.io/badge/Ansible-2.9+-green.svg) -->
 <!-- ![Linux](https://img.shields.io/badge/Platform-Linux-blue.svg) -->
-[![ansible](https://img.shields.io/badge/ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)](https://www.ansible.com/)
+<!-- [![ansible](https://img.shields.io/badge/ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)](https://www.ansible.com/) -->
 [![Debian](https://img.shields.io/badge/debian-A81D33?style=for-the-badge&logo=debian&logoColor=white)](https://www.debian.org/)
 [![Arch-Linux](https://img.shields.io/badge/Arch%20Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=fff)](https://archlinux.org)
 [![FreeBSD](https://img.shields.io/badge/FreeBSD-AB2B28?style=for-the-badge&logo=freebsd&logoColor=white)](https://www.freebsd.org/)
