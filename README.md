@@ -21,12 +21,12 @@ Ansible project for rapid and automated DevOps server provisioning.
 </div>
 
 ## <b>Table Of Content</b>
-- Project Overview
-- Quick Start
-- Usage
-- Project Structure
-- Notes
-- Sources
+- [Project Overview](#-project-overview)
+- [Quick Start](#-quick-start)
+- [Usage](#-usage)
+- [Project Structure](#-project-structure)
+- [Notes](#-notes)
+- [Sources](#-sources)
 
 ### <b>🎯 Project Overview</b>
 
